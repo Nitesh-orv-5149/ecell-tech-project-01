@@ -12,7 +12,7 @@ import {
 
 const ContactUs = () => {
   return (
-    <section className="relative bg-gradient-to-b from-[#0A0013] to-[#1A0A2E] text-white px-6 md:px-16 py-20 overflow-hidden">
+    <section className="relative text-white px-6 md:px-16 py-20 overflow-hidden">
       {/* Section Title */}
       <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-12">
         Get in Touch with <span className="text-[#F36F21]">NexNora</span>
@@ -101,10 +101,6 @@ const ContactUs = () => {
           <div></div>
         </div>
       </footer>
-
-      {/* Ambient background glows */}
-      <div className="absolute w-[700px] h-[700px] bg-[#2D2A9E] opacity-15 blur-[150px] -top-40 left-0"></div>
-      <div className="absolute w-[600px] h-[600px] bg-[#03D4D7] opacity-15 blur-[150px] bottom-0 right-0"></div>
     </section>
   );
 };

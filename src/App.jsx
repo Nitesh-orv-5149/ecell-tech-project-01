@@ -10,7 +10,7 @@ import ContactUs from './sections/ContactUs'
 
 const App = () => {
   return (
-    <div>
+    <main className='bg-black'>
       <NavBar />
       <section id="home"><Home /></section>
       <section id="why"><WhySection /></section>
@@ -18,7 +18,7 @@ const App = () => {
       <section id="services"><ServicesSection /></section>
       <section id="testimonials"><TestimonialsSection /></section>
       <section id="contact"><ContactUs /></section>
-    </div>
+    </main>
   )
 }
 

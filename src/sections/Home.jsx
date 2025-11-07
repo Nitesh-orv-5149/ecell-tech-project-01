@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import CodingLottie from "../components/codingLottie";
 
 const Home = () => {
   const words = ["Cutting Edge IT", "Innovative Tech", "AI-Driven Solutions"];
@@ -28,9 +29,12 @@ const Home = () => {
   }, [charIndex, isDeleting, index]);
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-screen w-full bg-linear-to-b from-[#0A0013] to-[#1A0A2E] text-center text-white px-6 overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center min-h-screen w-full text-center text-white px-6 overflow-hidden">
       {/* Content */}
-      <div className="flex flex-col items-center justify-center space-y-6 z-10">
+      <div className="sm:mt-0 mt-10">
+        <CodingLottie/>
+      </div>
+      <div className="flex flex-col items-center justify-center z-10">
         <p className="text-[#03D4D7] text-sm md:text-base tracking-widest uppercase">
           Accelerate Your Digital Transformation
         </p>
@@ -47,17 +51,10 @@ const Home = () => {
           NexNora builds intelligent, data-driven systems that empower
           organizations to evolve, adapt, and thrive in a digital-first world.
         </p>
-
-        <div className="pt-6">
-          <button className="px-10 py-3 rounded-full bg-[#F36F21] hover:bg-[#d65e1b] text-white font-semibold shadow-lg hover:shadow-[#F36F21]/40 transition duration-200">
-            Discover More ✨
-          </button>
-        </div>
       </div>
 
       {/* Subtle glowing background elements */}
       <div className="absolute w-[600px] h-[600px] bg-[#2D2A9E] opacity-30 blur-[120px] rounded-full -top-40 left-1/2 -translate-x-1/2"></div>
-      <div className="absolute w-[400px] h-[400px] bg-[#03D4D7] opacity-20 blur-[100px] bottom-0 right-0"></div>
     </section>
   );
 };

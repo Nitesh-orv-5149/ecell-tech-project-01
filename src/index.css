@@ -12,3 +12,8 @@ body,#root {
 body {
   overflow-x: hidden;
 }
+
+::selection {
+  background-color: #c77715; 
+  color: #ffffff; 
+}

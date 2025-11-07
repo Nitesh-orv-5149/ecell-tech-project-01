@@ -27,7 +27,7 @@ const PartnerSatisfaction = () => {
   ];
 
   return (
-    <section className="relative bg-gradient-to-b from-[#0A0013] to-[#1A0A2E] text-white py-24 px-6 md:px-16 overflow-hidden">
+    <section className="relative text-white py-24 px-6 md:px-16 overflow-hidden">
       <div className="max-w-6xl mx-auto text-center relative z-10">
         {/* Section Header */}
         <p className="text-[#03D4D7] font-semibold uppercase tracking-widest">
@@ -58,10 +58,6 @@ const PartnerSatisfaction = () => {
           ))}
         </div>
       </div>
-
-      {/* soft background glows */}
-      <div className="absolute w-[600px] h-[600px] bg-[#2D2A9E] opacity-20 blur-[150px] -top-40 left-0"></div>
-      <div className="absolute w-[500px] h-[500px] bg-[#03D4D7] opacity-20 blur-[120px] bottom-0 right-0"></div>
     </section>
   );
 };

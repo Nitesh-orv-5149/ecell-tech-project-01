@@ -70,7 +70,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="relative bg-gradient-to-b from-[#0A0013] to-[#1A0A2E] text-white py-24 px-6 md:px-16 overflow-hidden">
+    <section className="relative text-white py-24 px-6 md:px-16 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-6 mb-16">
@@ -94,10 +94,7 @@ const ServicesSection = () => {
           {services.map((service, idx) => (
             <div
               key={idx}
-              className={`group p-8 rounded-2xl bg-[#0A0013]/60 border transition-all duration-300 backdrop-blur-sm hover:scale-[1.03] ${
-                service.highlight
-                  ? "border-[#F36F21]/80 shadow-md shadow-[#F36F21]/20"
-                  : "border-[#2D2A9E]/30 hover:border-[#03D4D7]/60"
+              className={`group p-8 rounded-2xl bg-[#0A0013]/60 border transition-all duration-300 backdrop-blur-sm hover:scale-[1.03] border-[#2D2A9E]/30 hover:border-[#03D4D7]/60"
               }`}
             >
               <div className="flex items-center gap-4 mb-4">
@@ -113,10 +110,6 @@ const ServicesSection = () => {
           ))}
         </div>
       </div>
-
-      {/* soft ambient glows */}
-      <div className="absolute w-[700px] h-[700px] bg-[#2D2A9E] opacity-20 blur-[150px] -top-40 left-0"></div>
-      <div className="absolute w-[500px] h-[500px] bg-[#03D4D7] opacity-15 blur-[120px] bottom-0 right-0"></div>
     </section>
   );
 };
