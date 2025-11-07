@@ -36,7 +36,7 @@ const WhySection = () => {
               bg-[#0A0013]/70 border border-[#2D2A9E]/30 backdrop-blur-sm 
               before:content-[''] before:absolute before:inset-0 
               before:bg-[linear-gradient(to_right,rgba(50,150,255,0.05)_2px,transparent_1px),linear-gradient(to_bottom,rgba(50,150,255,0.05)_2px,transparent_1px)]
-              before:bg-[length:40px_40px] before:pointer-events-none before:z-0
+              before:bg-size-[40px_40px] before:pointer-events-none before:z-0
               hover:border-[#03D4D7]/80 hover:shadow-[0_0_25px_5px_rgba(3,212,215,0.3)] hover:scale-[1.03]`}
           >
             {/* Content above grid */}

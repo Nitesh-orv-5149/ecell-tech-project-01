@@ -15,7 +15,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-gradient-to-r from-[#0A0013] to-[#1A0A2E] text-white py-4 px-6 flex items-center justify-between shadow-lg z-50">
+    <nav className="fixed top-0 left-0 w-full bg-linear-to-r from-[#0A0013] to-[#1A0A2E] text-white py-4 px-6 flex items-center justify-between shadow-lg z-50">
       {/* Logo */}
       <div
         className="flex items-center gap-3 cursor-pointer"
@@ -91,7 +91,7 @@ const NavBar = () => {
 
       {/* Mobile Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-72 bg-gradient-to-b from-[#0A0013] to-[#1A0A2E] shadow-xl border-l border-[#2D2A9E]/50 transform transition-transform duration-500 ease-in-out z-50 flex flex-col ${
+        className={`fixed top-0 right-0 h-full w-72 bg-linear-to-b from-[#0A0013] to-[#1A0A2E] shadow-xl border-l border-[#2D2A9E]/50 transform transition-transform duration-500 ease-in-out z-50 flex flex-col ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

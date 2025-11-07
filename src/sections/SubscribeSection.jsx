@@ -28,7 +28,7 @@ const SubscribeSection = () => {
         </div>
 
         {/* Right Content - Subscribe Button */}
-        <div className="flex-shrink-0 ml-8">
+        <div className="shrink-0 ml-8">
           <button className="bg-transparent border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
             SUBSCRIBE NOW
           </button>
