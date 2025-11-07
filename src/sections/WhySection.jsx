@@ -3,14 +3,29 @@ import { ShieldCheck, Lock, FileSignature } from "lucide-react";
 
 const WhySection = () => {
   const cards = [
-    {
+     {
       id: 1,
       icon: <ShieldCheck size={40} className="text-[#03D4D7]" />,
-      
+      title: "Innovative Software Solutions for Every Business",
       description:
-        "At Yuvi Collab, we are a dynamic software solutions company dedicated to empowering businesses through innovative technology and creative strategy. From developing small-scale websites for individual clients to building large, high-performing e-commerce platforms, we provide end-to-end digital solutions that help brands establish a strong online presence. Our expertise extends to mobile app development, custom software design, social media growth, and game development tailored to diverse business needs.What sets Yuvi Collab apart is our commitment to combining technical excellence with creative vision. We don’t just build digital products — we build experiences that engage users and drive growth. Whether you’re a small business owner seeking visibility or a large enterprise looking for scalable solutions, Yuvi Collab delivers technology that works seamlessly for you.Alongside our industry-focused work, we also run a unique educational initiative that connects students and institutions with internship opportunities and expert mentorship through our dedicated platform. This initiative reflects our mission to nurture young talent and bridge the gap between education and the professional world.At Yuvi Collab, innovation meets collaboration — and together, we create progress.",
+        "At Yuvi Collab, we are a dynamic software solutions company dedicated to empowering businesses through innovative technology and creative strategy. From developing small-scale websites for individual clients to building large, high-performing e-commerce platforms, we provide end-to-end digital solutions that help brands establish a strong online presence. Our expertise extends to mobile app development, custom software design, social media growth, and game development tailored to diverse business needs.",
     },
-  
+    {
+      id: 2,
+      icon: <Lock size={40} className="text-[#F36F21]" />,
+      title: "Where Technology Meets Creative Vision",
+      description:
+        "What sets Yuvi Collab apart is our commitment to combining technical excellence with creative vision. We don’t just build digital products — we build experiences that engage users and drive growth. Whether you’re a small business owner seeking visibility or a large enterprise looking for scalable solutions, Yuvi Collab delivers technology that works seamlessly for you.",
+      highlight: true,
+    },
+    {
+      id: 3,
+      icon: <FileSignature size={40} className="text-[#2D2A9E]" />,
+      title: "Empowering Students Through Real-World Opportunities",
+      description:
+        "Alongside our industry-focused work, we also run a unique educational initiative that connects students and institutions with internship opportunities and expert mentorship through our dedicated platform. This initiative reflects our mission to nurture young talent and bridge the gap between education and the professional world.
+",
+    },
   ];
 
   return (
