@@ -4,18 +4,25 @@ import { MessageSquareQuote } from "lucide-react";
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "William Henry",
-      role: "Customer, Agent",
+      name: "UB Printers Team",
+      role: "Client",
       image:
         "https://images.unsplash.com/photo-1603415526960-f7e0328a2a99?auto=format&fit=crop&w=600&q=80",
-      text: "NexNora delivered far beyond expectations. Their team understood our challenges, built a scalable platform, and ensured every milestone hit the mark.",
+      text: "Yuvi Collab transformed our online presence. Their creativity and attention to detail helped us attract more customers and showcase our work beautifully.",
     },
     {
-      name: "Jenny Watson",
-      role: "Client, Marketing Head",
+      name: "Royal Jewellers",
+      role: "Client",
       image:
         "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?auto=format&fit=crop&w=600&q=80",
-      text: "The professionalism and technical expertise at NexNora are unmatched. Our digital transformation journey was seamless and truly empowering.",
+      text: "Professional, reliable, and highly skilled — the Yuvi Collab team perfectly understood our brand and built a website that truly represents who we are",
+    },
+    {
+      name: "Student User",
+      role: "Customer",
+      image:
+        "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?auto=format&fit=crop&w=600&q=80",
+      text: "The Yuvi Collab platform gave me the opportunity to learn from experts and land an internship relevant to my goals. A truly inspiring initiative.",
     },
   ];
 
