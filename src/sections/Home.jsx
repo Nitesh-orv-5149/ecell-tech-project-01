@@ -1,37 +1,63 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Home = () => {
+  const words = ["Cutting Edge IT", "Innovative Tech", "AI-Driven Solutions"];
+  const [text, setText] = useState("");
+  const [index, setIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentWord = words[index];
+    const timeout = setTimeout(() => {
+      if (!isDeleting && charIndex < currentWord.length) {
+        setText((prev) => prev + currentWord.charAt(charIndex));
+        setCharIndex(charIndex + 1);
+      } else if (isDeleting && charIndex > 0) {
+        setText((prev) => prev.slice(0, -1));
+        setCharIndex(charIndex - 1);
+      } else if (!isDeleting && charIndex === currentWord.length) {
+        setTimeout(() => setIsDeleting(true), 1000);
+      } else if (isDeleting && charIndex === 0) {
+        setIsDeleting(false);
+        setIndex((prev) => (prev + 1) % words.length);
+      }
+    }, isDeleting ? 60 : 120);
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, isDeleting, index]);
+
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-screen w-full bg-[#020014] text-center text-white px-6">
+    <section className="relative flex flex-col items-center justify-center min-h-screen w-full bg-gradient-to-b from-[#0A0013] to-[#1A0A2E] text-center text-white px-6 overflow-hidden">
       {/* Content */}
-      <div className="flex flex-col items-center justify-center space-y-4">
-        <p className="text-cyan-400 text-sm md:text-base tracking-widest uppercase">
+      <div className="flex flex-col items-center justify-center space-y-6 z-10">
+        <p className="text-[#03D4D7] text-sm md:text-base tracking-widest uppercase">
           Accelerate Your Digital Transformation
         </p>
 
         <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
-          <span className="block">Cutting Edge IT</span>
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-cyan-400">
-            Consulting Firm
+          <span className="block bg-gradient-to-r from-[#2D2A9E] to-[#03D4D7] text-transparent bg-clip-text">
+            {text}
+            <span className="animate-pulse text-[#F36F21]">|</span>
           </span>
+          <span className="block text-[#F36F21] mt-2">Consulting Firm</span>
         </h1>
 
         <p className="text-gray-400 mt-3 max-w-xl md:max-w-2xl text-base md:text-lg leading-relaxed">
-          NexNora creates award-winning Products, memorable Campaigns & 
-          remarkable Brands — transforming small businesses into agile, 
-          future-ready organizations.
+          NexNora builds intelligent, data-driven systems that empower
+          organizations to evolve, adapt, and thrive in a digital-first world.
         </p>
 
-        <div className="flex flex-wrap justify-center gap-4 pt-6">
-          <button className="px-8 py-3 rounded-full bg-gradient-to-r from-pink-500 to-cyan-400 text-white font-semibold hover:opacity-90 transition">
+        <div className="pt-6">
+          <button className="px-10 py-3 rounded-full bg-[#F36F21] hover:bg-[#d65e1b] text-white font-semibold shadow-lg hover:shadow-[#F36F21]/40 transition duration-200">
             Discover More ✨
-          </button>
-
-          <button className="px-8 py-3 rounded-full border border-cyan-400 text-cyan-400 font-semibold hover:bg-cyan-400 hover:text-[#020014] transition">
-            Hire Us Now
           </button>
         </div>
       </div>
+
+      {/* Subtle glowing background elements */}
+      <div className="absolute w-[600px] h-[600px] bg-[#2D2A9E] opacity-30 blur-[120px] rounded-full -top-40 left-1/2 -translate-x-1/2"></div>
+      <div className="absolute w-[400px] h-[400px] bg-[#03D4D7] opacity-20 blur-[100px] bottom-0 right-0"></div>
     </section>
   );
 };
