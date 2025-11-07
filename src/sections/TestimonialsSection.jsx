@@ -8,7 +8,7 @@ const TestimonialsSection = () => {
       role: "Customer, Agent",
       image:
         "https://images.unsplash.com/photo-1603415526960-f7e0328a2a99?auto=format&fit=crop&w=600&q=80",
-      text: "NexNora delivered far beyond expectations. Their team understood our challenges, built a scalable platform, and ensured every milestone hit the mark.",
+      text: "Yuvi Collab transformed our online presence. Their creativity and attention to detail helped us attract more customers and showcase our work beautifully",
     },
     {
       name: "Jenny Watson",
