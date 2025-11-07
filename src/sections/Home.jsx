@@ -28,7 +28,7 @@ const Home = () => {
   }, [charIndex, isDeleting, index]);
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-screen w-full bg-gradient-to-b from-[#0A0013] to-[#1A0A2E] text-center text-white px-6 overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center min-h-screen w-full bg-linear-to-b from-[#0A0013] to-[#1A0A2E] text-center text-white px-6 overflow-hidden">
       {/* Content */}
       <div className="flex flex-col items-center justify-center space-y-6 z-10">
         <p className="text-[#03D4D7] text-sm md:text-base tracking-widest uppercase">
@@ -36,7 +36,7 @@ const Home = () => {
         </p>
 
         <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
-          <span className="block bg-gradient-to-r from-[#2D2A9E] to-[#03D4D7] text-transparent bg-clip-text">
+          <span className="block bg-linear-to-r from-[#2D2A9E] to-[#03D4D7] text-transparent bg-clip-text">
             {text}
             <span className="animate-pulse text-[#F36F21]">|</span>
           </span>
