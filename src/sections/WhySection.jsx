@@ -6,25 +6,11 @@ const WhySection = () => {
     {
       id: 1,
       icon: <ShieldCheck size={40} className="text-[#03D4D7]" />,
-      title: "Associates First",
+      
       description:
-        "Your journey with Nexnora is our passion. Our associate-first culture begins with our commitment to your fulfilling experience with us. Becoming a part of the Nexnora family brings meaning to your work with colleagues that are just as obsessed with quality and excellence as you are. Your best work starts here.",
+        "At Yuvi Collab, we are a dynamic software solutions company dedicated to empowering businesses through innovative technology and creative strategy. From developing small-scale websites for individual clients to building large, high-performing e-commerce platforms, we provide end-to-end digital solutions that help brands establish a strong online presence. Our expertise extends to mobile app development, custom software design, social media growth, and game development tailored to diverse business needs. What sets Yuvi Collab apart is our commitment to combining technical excellence with creative vision. We don’t just build digital products — we build experiences that engage users and drive growth. Whether you’re a small business owner seeking visibility or a large enterprise looking for scalable solutions, Yuvi Collab delivers technology that works seamlessly for you.Alongside our industry-focused work, we also run a unique educational initiative that connects students and institutions with internship opportunities and expert mentorship through our dedicated platform. This initiative reflects our mission to nurture young talent and bridge the gap between education and the professional world.",
     },
-    {
-      id: 2,
-      icon: <Lock size={40} className="text-[#F36F21]" />,
-      title: "Nexnora Solicitude",
-      description:
-        "Nexnora Tech supports our customers with the delivery of mission-critical programs and direct contributions to those very missions. Nexnora Cares is our social responsibility arm, organized to deliver continuous positive impact for underserved communities through self-sustaining solutions.",
-      highlight: true,
-    },
-    {
-      id: 3,
-      icon: <FileSignature size={40} className="text-[#2D2A9E]" />,
-      title: "Industry Certified",
-      description:
-        "We, as a custom mobile and software app development company, process highly robust technological solutions for your business needs. Our partners choose us from a plethora of other app development agencies because of our rich reserve in experience and versatility.",
-    },
+    
   ];
 
   return (
