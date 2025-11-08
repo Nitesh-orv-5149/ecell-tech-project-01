@@ -85,7 +85,7 @@ const ServicesSection = () => {
           </div>
 
           <p className="text-gray-400 md:max-w-md leading-relaxed">
-            NexNora is a global web & mobile app development company operating in India, USA, Singapore, and UAE. We blend innovation, design, and technology to build scalable, world-class digital solutions.
+            Yuvi Collab is a global web and mobile app development company based in India, delivering innovative, design-driven, and scalable digital solutions that empower businesses worldwide.
           </p>
         </div>
 

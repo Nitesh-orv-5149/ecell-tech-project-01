@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "lottie-react";
-import codingLottie from "../../public/animation/codingLottie.json"; // adjust path based on your structure
+import codingLottie from "../assets/animation/codingLottie.json"; // adjust path based on your structure
 
 const CodingLottie = () => {
   return (

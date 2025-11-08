@@ -36,9 +36,7 @@ const TestimonialsSection = () => {
           </div>
 
           <div className="max-w-md text-gray-400 leading-relaxed">
-            NexNoraTech builds intelligent platforms that create meaningful,
-            measurable impact — connecting businesses and users through
-            technology that performs with precision.
+            Yuvi Collab builds intelligent digital experiences that create meaningful, measurable impact — connecting businesses and users through technology that performs with creativity and precision.
           </div>
         </div>
 
