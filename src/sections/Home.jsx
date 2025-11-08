@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import { gsap } from "gsap";
 import CodingLottie from "../components/codingLottie";
 
 const Home = () => {
@@ -8,6 +9,12 @@ const Home = () => {
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
+  const sectionRef = useRef(null);
+  const lottieRef = useRef(null);
+  const headingRef = useRef(null);
+  const paraRef = useRef(null);
+
+  // ⌨️ Typing effect
   useEffect(() => {
     const currentWord = words[index];
     const timeout = setTimeout(() => {
@@ -28,13 +35,50 @@ const Home = () => {
     return () => clearTimeout(timeout);
   }, [charIndex, isDeleting, index]);
 
+  // 🎬 GSAP Animation (Reveal after 1.1s)
+  useEffect(() => {
+    const tl = gsap.timeline({ delay: 1.1 }); // start after 1.1s
+
+    tl.fromTo(
+      sectionRef.current,
+      { opacity: 0 },
+      { opacity: 1, duration: 0.4, ease: "power1.out" }
+    )
+      .fromTo(
+        lottieRef.current,
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 1, ease: "power3.out" },
+        "-=0.2"
+      )
+      .fromTo(
+        headingRef.current,
+        { opacity: 0, scale: 0.9, y: 30 },
+        { opacity: 1, scale: 1, y: 0, duration: 1, ease: "power3.out" },
+        "-=0.6"
+      )
+      .fromTo(
+        paraRef.current,
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
+        "-=0.6"
+      );
+  }, []);
+
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-screen w-full text-center text-white px-6 overflow-hidden">
-      {/* Content */}
-      <div className="sm:mt-0 mt-10">
-        <CodingLottie/>
+    <section
+      ref={sectionRef}
+      className="relative flex flex-col items-center justify-center min-h-screen w-full text-center text-white px-6 overflow-hidden"
+    >
+      {/* Lottie animation */}
+      <div ref={lottieRef} className="sm:mt-0 mt-10">
+        <CodingLottie />
       </div>
-      <div className="flex flex-col items-center justify-center z-10">
+
+      {/* Main text content */}
+      <div
+        ref={headingRef}
+        className="flex flex-col items-center justify-center z-10"
+      >
         <p className="text-[#03D4D7] text-sm md:text-base tracking-widest uppercase">
           Accelerate Your Digital Transformation
         </p>
@@ -46,14 +90,17 @@ const Home = () => {
           </span>
           <span className="block text-[#F36F21] mt-2">Software Company</span>
         </h1>
-
-        <p className="text-gray-400 mt-3 max-w-xl md:max-w-2xl text-base md:text-lg leading-relaxed">
-          NexNora builds intelligent, data-driven systems that empower
-          organizations to evolve, adapt, and thrive in a digital-first world.
-        </p>
       </div>
 
-      {/* Subtle glowing background elements */}
+      <p
+        ref={paraRef}
+        className="text-gray-400 mt-3 max-w-xl md:max-w-2xl text-base md:text-lg leading-relaxed"
+      >
+        NexNora builds intelligent, data-driven systems that empower
+        organizations to evolve, adapt, and thrive in a digital-first world.
+      </p>
+
+      {/* Subtle background glow */}
       <div className="absolute w-[600px] h-[600px] bg-[#2D2A9E] opacity-30 blur-[120px] rounded-full -top-40 left-1/2 -translate-x-1/2"></div>
     </section>
   );

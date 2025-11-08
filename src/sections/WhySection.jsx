@@ -28,6 +28,9 @@ const WhySection = () => {
 
   return (
     <section className="relative text-white py-24 px-6 md:px-16 overflow-hidden">
+      <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-16">
+              About Us
+            </h2>
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
         {cards.map((card) => (
           <div

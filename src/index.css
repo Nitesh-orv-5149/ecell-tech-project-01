@@ -17,3 +17,22 @@ body {
   background-color: #c77715; 
   color: #ffffff; 
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;              /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0013;    /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #03d4d7;     /* Scrollbar thumb color */
+  border-radius: 10px;     /* Rounded edges */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #31fcff;     /* Lighter on hover */
+}
+

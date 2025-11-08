@@ -22,13 +22,19 @@ const NavBar = () => {
   }, []);
 
   // Smooth scroll handler
-  const handleScroll = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false);
-    }
-  };
+const handleScroll = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    const sectionTop = section.getBoundingClientRect().top + window.scrollY; // absolute position
+    const offset = 30; // stop 10px before
+    window.scrollTo({
+      top: sectionTop - offset,
+      behavior: "smooth",
+    });
+    setIsOpen(false);
+  }
+};
+
 
   return isMobile ? (
     <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} handleScroll={handleScroll} navLinks={navLinks} />
