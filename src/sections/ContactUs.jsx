@@ -49,10 +49,10 @@ const ContactUs = () => {
                 <a href="#" className="hover:text-[#03D4D7]">
                   <Facebook size={18} />
                 </a>
-                <a href="#" className="hover:text-[#03D4D7]">
+                <a href="https://x.com/Yuvicollab" className="hover:text-[#03D4D7]">
                   <Twitter size={18} />
                 </a>
-                <a href="#" className="hover:text-[#03D4D7]">
+                <a href="https://www.instagram.com/yuvi_collab?igsh=MTd1ZXozaXVnOGhibg==" className="hover:text-[#03D4D7]">
                   <Instagram size={18} />
                 </a>
                 <a href="#" className="hover:text-[#03D4D7]">
