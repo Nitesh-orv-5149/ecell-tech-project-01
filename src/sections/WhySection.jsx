@@ -1,61 +1,74 @@
 import React from "react";
-import { ShieldCheck, Lock, FileSignature } from "lucide-react";
+import { Code2, Layers, GraduationCap } from "lucide-react";;
 
 const WhySection = () => {
   const cards = [
-    {
-      id: 1,
-      icon: <ShieldCheck size={40} className="text-[#03D4D7]" />,
-      title: "Associates First",
-      description:
-        "Your journey with Nexnora is our passion. Our associate-first culture begins with our commitment to your fulfilling experience with us. Becoming a part of the Nexnora family brings meaning to your work with colleagues that are just as obsessed with quality and excellence as you are. Your best work starts here.",
-    },
-    {
-      id: 2,
-      icon: <Lock size={40} className="text-[#03D4D7]" />,
-      title: "Nexnora Solicitude",
-      description:
-        "Nexnora Tech supports our customers with the delivery of mission-critical programs and direct contributions to those very missions. Nexnora Cares is our social responsibility arm, organized to deliver continuous positive impact for underserved communities through self-sustaining solutions.",
-    },
-    {
-      id: 3,
-      icon: <FileSignature size={40} className="text-[#03D4D7]" />,
-      title: "Industry Certified",
-      description:
-        "We, as a custom mobile and software app development company, process highly robust technological solutions for your business needs. Our partners choose us from a plethora of other app development agencies because of our rich reserve in experience and versatility.",
-    },
-  ];
+  {
+    id: 1,
+    icon: <Code2 size={40} className="text-[#03D4D7]" />,
+    title: "Innovative Digital Solutions",
+    description:
+      "At Yuvi Collab, we are a dynamic software solutions company empowering businesses through innovation and creativity. From small-scale websites to large e-commerce platforms, we deliver end-to-end digital solutions that strengthen brand presence and performance.",
+  },
+  {
+    id: 2,
+    icon: <Layers size={40} className="text-[#03D4D7]" />,
+    title: "Creative & Scalable Technology",
+    description:
+      "Our expertise spans mobile app development, custom software design, social media growth, and game development, all tailored to diverse business needs. We blend technical excellence with creative vision — building not just digital products, but engaging experiences that drive growth.",
+  },
+  {
+    id: 3,
+    icon: <GraduationCap size={40} className="text-[#03D4D7]" />,
+    title: "Empowering Future Talent",
+    description:
+      "Beyond our industry work, we also lead an educational initiative connecting students and institutions with internship opportunities and expert mentorship. This reflects our mission to nurture young talent and bridge the gap between education and the professional world.",
+  },
+];
 
   return (
     <section className="relative text-white py-24 px-6 md:px-16 overflow-hidden">
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
         {cards.map((card) => (
           <div
-            key={card.id}
-            className={`relative p-8 rounded-2xl overflow-hidden transition-all duration-500 
-              bg-[#0A0013]/70 border border-[#2D2A9E]/30 backdrop-blur-sm 
-              before:content-[''] before:absolute before:inset-0 
-              before:bg-[linear-gradient(to_right,rgba(50,150,255,0.05)_2px,transparent_1px),linear-gradient(to_bottom,rgba(50,150,255,0.05)_2px,transparent_1px)]
-              before:bg-size-[40px_40px] before:pointer-events-none before:z-0
-              hover:border-[#03D4D7]/80 hover:shadow-[0_0_25px_5px_rgba(3,212,215,0.3)] hover:scale-[1.03]`}
-          >
-            {/* Content above grid */}
-            <div className="relative z-10">
-              <div className="flex items-center justify-between mb-6">
-                {card.icon}
-                <span className="text-gray-200 text-3xl font-bold opacity-30">
-                  0{card.id}.
-                </span>
-              </div>
+  key={card.id}
+  className="relative p-8 rounded-2xl bg-[#0A0013]/70 border border-[#2D2A9E]/30 
+  backdrop-blur-sm overflow-hidden group transition-all duration-500 hover:scale-[1.02]"
+>
+  {/* 🔹 Animated perimeter border */}
+  <span
+    className="absolute inset-0 rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+    style={{
+      background:
+        "linear-gradient(90deg, #03D4D7, transparent 50%, transparent 100%)",
+      backgroundSize: "200% 200%",
+      animation: "borderMove 2s linear infinite",
+      mask:
+        "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+      WebkitMask:
+        "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+      WebkitMaskComposite: "xor",
+      maskComposite: "exclude",
+      padding: "2px",
+    }}
+  ></span>
 
-              <h3 className="text-xl font-semibold mb-4 text-[#03D4D7]">
-                {card.title}
-              </h3>
-              <p className="text-gray-300 leading-relaxed text-sm">
-                {card.description}
-              </p>
-            </div>
-          </div>
+  {/* 🔹 Content */}
+  <div className="relative z-10">
+    <div className="flex items-center justify-between mb-6">{card.icon}</div>
+    <h3 className="text-xl font-semibold mb-4 text-[#03D4D7]">{card.title}</h3>
+    <p className="text-gray-300 leading-relaxed text-sm">{card.description}</p>
+  </div>
+
+  {/* 🔹 Inline keyframes for animation */}
+  <style>{`
+    @keyframes borderMove {
+      0% { background-position: 0% 0%; }
+      100% { background-position: 200% 0%; }
+    }
+  `}</style>
+</div>
+
         ))}
       </div>
     </section>
