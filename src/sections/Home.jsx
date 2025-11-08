@@ -44,7 +44,7 @@ const Home = () => {
             {text}
             <span className="animate-pulse text-[#F36F21]">|</span>
           </span>
-          <span className="block text-[#F36F21] mt-2">Consulting Firm</span>
+          <span className="block text-[#F36F21] mt-2">Software Company</span>
         </h1>
 
         <p className="text-gray-400 mt-3 max-w-xl md:max-w-2xl text-base md:text-lg leading-relaxed">
