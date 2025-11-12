@@ -11,7 +11,7 @@ import {
 
 const ContactUs = () => {
   return (
-    <section className="relative text-white px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 overflow-hidden">
+    <section className="relative text-white px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-24 sm:py-16 md:py-20 overflow-hidden">
       
       {/* Section Title */}
       <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-center mb-3 sm:mb-4 leading-tight">
@@ -130,11 +130,6 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-
-      {/* Subtle Decorative Blended linear Elements - Low opacity to blend with other sections */}
-      <div className="absolute -top-32 sm:-top-40 md:-top-48 lg:-top-32 right-0 sm:right-5 lg:right-10 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-linear-to-b from-[#03D4D7]/10 to-transparent rounded-full blur-3xl pointer-events-none opacity-40"></div>
-      <div className="absolute -bottom-32 sm:-bottom-40 md:-bottom-48 lg:-bottom-32 left-0 sm:left-5 lg:left-10 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-linear-to-t from-[#F36F21]/10 to-transparent rounded-full blur-3xl pointer-events-none opacity-40"></div>
-      <div className="hidden sm:block absolute top-1/2 right-1/3 w-60 sm:w-72 md:w-80 h-60 sm:h-72 md:h-80 bg-linear-to-b from-[#F36F21]/8 via-transparent to-[#03D4D7]/8 rounded-full blur-3xl pointer-events-none opacity-30"></div>
     </section>
   );
 };

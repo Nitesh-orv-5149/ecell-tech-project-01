@@ -8,21 +8,18 @@ const PartnerSatisfaction = () => {
       icon: <Rocket size={48} className="text-[#03D4D7]" />,
       title: "Digital Promotion",
       subtitle: "Boosters",
-      color: "text-[#F36F21]",
     },
     {
       id: 2,
       icon: <FileSignature size={48} className="text-[#03D4D7]" />,
       title: "NDA",
       subtitle: "Protected Apps",
-      color: "text-[#F36F21]",
     },
     {
       id: 3,
       icon: <Wallet size={48} className="text-[#03D4D7]" />,
       title: "100% Money-Back",
       subtitle: "Guarantee",
-      color: "text-[#F36F21]",
     },
   ];
 
@@ -45,12 +42,12 @@ const PartnerSatisfaction = () => {
           {items.map((item) => (
             <div
               key={item.id}
-              className="flex flex-col items-center text-center space-y-4 p-8 rounded-2xl bg-[#0A0013]/60 border border-transparent hover:border-[#03D4D7]/50 hover:scale-[1.03] transition-all duration-300 backdrop-blur-sm"
+              className="flex flex-col items-center text-center space-y-4 p-8 rounded-2xl bg-[#0A0013]/60 border border-transparent group hover:border-[#03D4D7]/50 hover:scale-[1.03] transition-all duration-300 backdrop-blur-sm"
             >
               <div className="p-4 bg-[#1A0A2E]/60 rounded-full border border-[#03D4D7]/30">
                 {item.icon}
               </div>
-              <h3 className={`${item.color} font-bold text-lg`}>
+              <h3 className={'text-[#03D4D7] group-hover:text-[#F36F21] font-bold text-lg'}>
                 {item.title}
               </h3>
               <p className="text-gray-300 text-sm">{item.subtitle}</p>
