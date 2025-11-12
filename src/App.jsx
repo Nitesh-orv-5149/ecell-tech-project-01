@@ -1,5 +1,5 @@
-"use client";
 import React, { useEffect, useState } from "react";
+import { Analytics } from '@vercel/analytics/react';
 
 // Sections & Components
 import Home from "./sections/Home";
@@ -63,6 +63,7 @@ const App = () => {
   <section id="contact">
     <ContactUs />
   </section>
+  <Analytics />
     </main>
   );
 };
